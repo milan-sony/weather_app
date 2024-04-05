@@ -1,11 +1,15 @@
 <template>
     <nav class="bg-blue-700">
         <div class="max-w-screen-lg flex flex-wrap justify-center items-center mx-auto p-4 md:max-2xl:justify-between">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <span
-                    class="self-center text-2xl font-extrabold uppercase tracking-wide whitespace-nowrap dark:text-white max-md:pb-4">Weather
-                    App</span>
-            </a>
+            <RouterLink :to="{ name: 'Home' }">
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span
+                        class="self-center text-2xl font-extrabold uppercase tracking-wide whitespace-nowrap dark:text-white max-md:pb-4"><i
+                            class="fa-solid fa-cloud-sun-rain"></i> Weather
+                        App
+                    </span>
+                </div>
+            </RouterLink>
 
             <form class="flex items-center">
                 <label for="simple-search" class="sr-only">Search</label>
@@ -31,9 +35,9 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
 
 }
 </script>
-
-<style scoped></style>
