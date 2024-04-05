@@ -4,7 +4,7 @@
             <RouterLink :to="{ name: 'Home' }">
                 <div class="flex items-center space-x-3 rtl:space-x-reverse">
                     <span
-                        class="self-center text-2xl font-extrabold uppercase tracking-wide whitespace-nowrap dark:text-white max-md:pb-4"><i
+                        class="self-center text-2xl font-extrabold uppercase tracking-wide whitespace-nowrap text-white dark:text-white max-md:pb-4"><i
                             class="fa-solid fa-cloud-sun-rain"></i> Weather
                         App
                     </span>
@@ -19,7 +19,7 @@
                         placeholder="Search place" required />
                 </div>
                 <button type="submit"
-                    class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-500 rounded-lg border border-blue-700 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-red-500 dark:focus:ring-blue-800">
                     <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 20 20">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
