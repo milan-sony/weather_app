@@ -4,12 +4,12 @@
         <SiteNavigation />
         <!-- Search -->
         <div class="max-w-screen-sm items-center mx-auto p-5">
-            <form class="flex items-center">
+            <form class="flex items-center" @submit="submitForm">
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative w-full">
                     <input type="text" id="simple-search"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
-                        placeholder="Search place" required />
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none block w-full ps-10 p-2.5"
+                        placeholder="Search for a city" v-model="formValue.place" required />
                 </div>
                 <button type="submit"
                     class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300">
@@ -21,6 +21,7 @@
                     <span class="sr-only">Search</span>
                 </button>
             </form>
+            <p class="text-start text-2xl pt-4 font-bold text-white">Search : {{ formValue.place }}</p>
         </div>
     </div>
 </template>
@@ -33,6 +34,19 @@ export default {
     name: 'Home',
     components: {
         SiteNavigation
+    },
+    data() {
+        return {
+            formValue: {
+                place: ''
+            }
+        }
+    },
+    methods: {
+        submitForm(event) {
+            event.preventDefault()
+            console.log(this.formValue)
+        }
     }
 }
 </script>
