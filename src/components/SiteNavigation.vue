@@ -5,8 +5,7 @@
                 <div class="flex items-center space-x-3 rtl:space-x-reverse">
                     <span
                         class="self-center text-2xl font-extrabold uppercase tracking-wide whitespace-nowrap text-white dark:text-white max-md:pb-4"><i
-                            class="fa-solid fa-cloud-sun-rain"></i> Weather
-                        App
+                            class="fa-solid fa-cloud-sun-rain"></i> Weathery
                     </span>
                 </div>
             </RouterLink>
