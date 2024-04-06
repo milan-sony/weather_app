@@ -4,10 +4,10 @@
             <RouterLink :to="{ name: 'Home' }">
                 <div class="flex justify-between items-center ">
                     <span
-                        class="self-center text-2xl font-extrabold uppercase tracking-wider whitespace-nowrap text-white dark:text-white max-md:pb-4"><i
-                            class="fa-solid fa-cloud-sun-rain"></i> Weathery
+                        class="self-center text-2xl font-extrabold uppercase tracking-wider whitespace-nowrap text-white"><i
+                            class="fa-solid fa-cloud-sun-rain text-yellow-400"></i> Weathery
                     </span>
-                    <div id="app" class="text-right font-bold text-sm text-white ">
+                    <div id="app" class="text-right font-bold text-sm text-white">
                         {{ new Date().toLocaleString(
                             'en-us',{
                                 weekday: 'long',
