@@ -28,6 +28,7 @@
                     <span class="sr-only">Search</span>
                 </button>
             </form>
+            <p v-if="errorMsg" class="text-white font-semibold">Please enter a place</p>
             <div v-if="searchResult">
                 <p class="text-start text-xl pt-4 pb-2 font-bold text-white">Search result for: {{ formValue.place }}
                 </p>
@@ -59,7 +60,8 @@ export default {
             formValue: {
                 place: ''
             },
-            searchResult: ''
+            searchResult: '',
+            errorMsg: false
         }
     },
     methods: {
@@ -73,11 +75,15 @@ export default {
                 }).catch((err) => {
                     console.log(err)
                 })
+            }else{
+                this.errorMsg = true
             }
         },
         checkInput() {
             if (this.formValue.place === '') {
                 this.searchResult = ''
+            }else{
+                this.errorMsg = false
             }
         }
     }
