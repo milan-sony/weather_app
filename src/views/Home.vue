@@ -32,7 +32,7 @@
             <p v-show="serverError" class="text-white font-semibold pt-2">Sorry, something went wrong please try again
                 later</p>
             <div v-show="searchResult">
-                <p class="text-start text-xl pt-4 pb-2 font-bold text-white">Search result for: {{ formValue.place }}
+                <p class="text-start text-xl pt-4 pb-2 font-bold text-white">Search results for: {{ formValue.place }}
                 </p>
                 <div class="bg-white p-4 rounded-md">
                     <div v-for="place in searchResult" :key="place.id">
@@ -42,6 +42,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- card -->
+        <div v-if="weatherData" class="text-center text-white font-bold">
+            {{ weatherData.location.name }} <br>
+            {{ weatherData.location.region }} <br>
+            {{ weatherData.location.country }} <br>
+            {{ weatherData.current.temp_c }} &deg;C
         </div>
     </div>
 </template>
@@ -71,11 +78,11 @@ export default {
     methods: {
         async searchPlace() {
             if (this.formValue.place !== '') {
-                console.log(this.formValue.place)
+                // console.log(this.formValue.place)
                 await axios.get(`http://api.weatherapi.com/v1/search.json?key=a0181bd8c8b14fa99aa84630232101&q=${this.formValue.place}`).then((response) => {
-                    console.log(response.data)
+                    // console.log(response.data)
                     this.searchResult = response.data
-                    console.log('Result', this.searchResult)
+                    // console.log('Result', this.searchResult)
                 }).catch((err) => {
                     this.serverError = true
                     this.formValue.place = ''
@@ -94,10 +101,11 @@ export default {
             }
         },
         async getWeather(id) {
-            console.log('The ID is:', id)
+            // console.log('The ID is:', id)
             await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a0181bd8c8b14fa99aa84630232101&q=id:${id}&days=3&aqi=no&alerts=no`).then((response) => {
-                console.log(response.data)
+                // console.log(response.data)
                 this.weatherData = response.data
+                this.places = response.data
                 this.formValue.place = ''
                 this.searchResult = ''
             }).catch((err) => {
