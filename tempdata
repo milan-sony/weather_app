@@ -1,0 +1,317 @@
+{
+    "location": {
+        "name": "Changanacherry",
+        "region": "Kerala",
+        "country": "India",
+        "lat": 9.47,
+        "lon": 76.55,
+        "tz_id": "Asia/Kolkata",
+        "localtime_epoch": 1712489469,
+        "localtime": "2024-04-07 17:01"
+    },
+    "current": {
+        "last_updated_epoch": 1712489400,
+        "last_updated": "2024-04-07 17:00",
+        "temp_c": 30.8,
+        "temp_f": 87.4,
+        "is_day": 1,
+        "condition": {
+            "text": "Patchy rain nearby",
+            "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
+            "code": 1063
+        },
+        "humidity": 63,
+        "cloud": 79,
+        "feelslike_c": 35.2,
+        "feelslike_f": 95.3
+    },
+    "forecast": {
+        "forecastday": [
+            {
+                "date": "2024-04-07",
+                "date_epoch": 1712448000,
+                "day": {
+                    "maxtemp_c": 33.7,
+                    "maxtemp_f": 92.6,
+                    "mintemp_c": 26,
+                    "mintemp_f": 78.8,
+                    "avgtemp_c": 29,
+                    "avgtemp_f": 84.1,
+                    "daily_will_it_rain": 1,
+                    "daily_chance_of_rain": 85,
+                    "daily_will_it_snow": 0,
+                    "condition": {
+                        "text": "Patchy rain nearby",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
+                        "code": 1063
+                    }
+                },
+                "astro": {},
+                "hour": [
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    }
+                ]
+            },
+            {
+                "date": "2024-04-08",
+                "date_epoch": 1712534400,
+                "day": {
+                    "maxtemp_c": 34.1,
+                    "maxtemp_f": 93.4,
+                    "mintemp_c": 25.2,
+                    "mintemp_f": 77.4,
+                    "avgtemp_c": 28.9,
+                    "avgtemp_f": 84,
+                    "daily_will_it_rain": 1,
+                    "daily_chance_of_rain": 89,
+                    "daily_will_it_snow": 0,
+                    "condition": {
+                        "text": "Patchy rain nearby",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
+                        "code": 1063
+                    }
+                },
+                "astro": {},
+                "hour": [
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    }
+                ]
+            },
+            {
+                "date": "2024-04-09",
+                "date_epoch": 1712620800,
+                "day": {
+                    "maxtemp_c": 36,
+                    "maxtemp_f": 96.8,
+                    "mintemp_c": 25.3,
+                    "mintemp_f": 77.5,
+                    "avgtemp_c": 29.2,
+                    "avgtemp_f": 84.6,
+                    "daily_will_it_rain": 1,
+                    "daily_chance_of_rain": 89,
+                    "daily_will_it_snow": 0,
+                    "condition": {
+                        "text": "Moderate rain",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/302.png",
+                        "code": 1189
+                    }
+                },
+                "astro": {},
+                "hour": [
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    },
+                    {
+                        "condition": {}
+                    }
+                ]
+            }
+        ]
+    }
+}

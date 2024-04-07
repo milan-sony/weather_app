@@ -28,15 +28,17 @@
                     <span class="sr-only">Search</span>
                 </button>
             </form>
-            <p v-if="errorMsg" class="text-white font-semibold">Please enter a place</p>
-            <div v-if="searchResult">
+            <p v-show="errorMsg" class="text-white font-semibold pt-2">Please enter a place</p>
+            <p v-show="serverError" class="text-white font-semibold pt-2">Sorry, something went wrong please try again
+                later</p>
+            <div v-show="searchResult">
                 <p class="text-start text-xl pt-4 pb-2 font-bold text-white">Search result for: {{ formValue.place }}
                 </p>
                 <div class="bg-white p-4 rounded-md">
                     <div v-for="place in searchResult" :key="place.id">
-                        <button class="hover:text-blue-700 hover:font-bold font-semibold p-3">{{ place.name }}, {{
+                        <button class="hover:text-blue-700 hover:font-bold font-semibold p-2"
+                            @click="getWeather(place.id)">{{ place.name }}, {{
                 place.region }}, {{ place.country }}</button>
-                        <hr>
                     </div>
                 </div>
             </div>
@@ -61,7 +63,9 @@ export default {
                 place: ''
             },
             searchResult: '',
-            errorMsg: false
+            errorMsg: false,
+            serverError: false,
+            weatherData: ''
         }
     },
     methods: {
@@ -73,18 +77,32 @@ export default {
                     this.searchResult = response.data
                     console.log('Result', this.searchResult)
                 }).catch((err) => {
+                    this.serverError = true
+                    this.formValue.place = ''
                     console.log(err)
                 })
-            }else{
+            } else {
                 this.errorMsg = true
             }
         },
         checkInput() {
             if (this.formValue.place === '') {
                 this.searchResult = ''
-            }else{
+            } else {
                 this.errorMsg = false
+                this.serverError = false
             }
+        },
+        async getWeather(id) {
+            console.log('The ID is:', id)
+            await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a0181bd8c8b14fa99aa84630232101&q=id:${id}&days=3&aqi=no&alerts=no`).then((response) => {
+                console.log(response.data)
+                this.weatherData = response.data
+                this.formValue.place = ''
+                this.searchResult = ''
+            }).catch((err) => {
+                console.log(err)
+            })
         }
     }
 }
