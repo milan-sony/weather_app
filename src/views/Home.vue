@@ -72,14 +72,15 @@ export default {
             searchResult: '',
             errorMsg: false,
             serverError: false,
-            weatherData: ''
+            weatherData: '',
+            API_KEY: import.meta.env.VITE_APP_API_KEY
         }
     },
     methods: {
         async searchPlace() {
             if (this.formValue.place !== '') {
                 // console.log(this.formValue.place)
-                await axios.get(`http://api.weatherapi.com/v1/search.json?key=a0181bd8c8b14fa99aa84630232101&q=${this.formValue.place}`).then((response) => {
+                await axios.get(`http://api.weatherapi.com/v1/search.json?key=${this.API_KEY}&q=${this.formValue.place}`).then((response) => {
                     // console.log(response.data)
                     this.searchResult = response.data
                     // console.log('Result', this.searchResult)
@@ -102,7 +103,7 @@ export default {
         },
         async getWeather(id) {
             // console.log('The ID is:', id)
-            await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=a0181bd8c8b14fa99aa84630232101&q=id:${id}&days=3&aqi=no&alerts=no`).then((response) => {
+            await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${this.API_KEY}&q=id:${id}&days=3&aqi=no&alerts=no`).then((response) => {
                 // console.log(response.data)
                 this.weatherData = response.data
                 this.places = response.data
